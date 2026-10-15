@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect Hospital Appointment Portal</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f1f7fa; color: #253746; }
+        header { padding: 26px; background: #126782; color: white; text-align: center; }
+        header h1 { margin: 0 0 10px; }
+        nav { padding: 14px; background: #083d56; text-align: center; }
+        nav a { margin: 5px 15px; color: white; text-decoration: none; display: inline-block; }
+        main { max-width: 1100px; margin: auto; padding: 24px; }
+        section { margin-bottom: 25px; }
+        .announcement { padding: 18px; background: #dff2f8; border-left: 5px solid #126782; }
+        .doctors { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+        .card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 3px 10px #00000012; }
+        .card h3 { color: #126782; }
+        .available { color: #176b32; font-weight: bold; }
+        .table-wrapper { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 13px; border: 1px solid #d6e2e8; text-align: left; }
+        th { background: #126782; color: white; }
+        footer { padding: 18px; background: #083d56; color: white; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CareConnect Hospital</h1>
+        <p>Online Hospital Appointment Portal</p>
+    </header>
+    <nav aria-label="Main navigation">
+        <a href="#announcements">Announcements</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#slots">Appointment Slots</a>
+    </nav>
+    <main>
+        <section id="announcements" class="announcement">
+            <h2>Hospital Announcements</h2>
+            <p>Online appointment information is now available.</p>
+            <p>Please arrive 15 minutes before your appointment.</p>
+        </section>
+        <section id="doctors">
+            <h2>Doctor Profiles</h2>
+            <div class="doctors">
+                <article class="card">
+                    <h3>Dr. Asha Kumar</h3>
+                    <p><strong>Specialization:</strong> Cardiology</p>
+                    <p><strong>Consultation:</strong> 9:00 AM - 12:00 PM</p>
+                    <p><strong>Days:</strong> Monday to Friday</p>
+                    <p class="available">Appointments Available</p>
+                </article>
+                <article class="card">
+                    <h3>Dr. Rahul Sharma</h3>
+                    <p><strong>Specialization:</strong> General Medicine</p>
+                    <p><strong>Consultation:</strong> 2:00 PM - 5:00 PM</p>
+                    <p><strong>Days:</strong> Monday to Saturday</p>
+                    <p class="available">Appointments Available</p>
+                </article>
+                <!-- NEW_DOCTOR -->
+            </div>
+        </section>
+        <section id="slots">
+            <h2>Appointment Slots</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead><tr><th>Doctor</th><th>Specialization</th><th>Time</th><th>Availability</th></tr></thead>
+                    <tbody>
+                        <tr><td>Dr. Asha Kumar</td><td>Cardiology</td><td>9:00 AM - 9:30 AM</td><td class="available">Available</td></tr>
+                        <tr><td>Dr. Asha Kumar</td><td>Cardiology</td><td>10:00 AM - 10:30 AM</td><td>Booked</td></tr>
+                        <tr><td>Dr. Rahul Sharma</td><td>General Medicine</td><td>2:00 PM - 2:30 PM</td><td class="available">Available</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>Academic demonstration with sample doctor and appointment details.</footer>
+</body>
+</html>
